@@ -1,0 +1,286 @@
+// Variable
+$primary-color:#3C64B1;
+$title-color:#373F41;
+$text-color:#737B7D;
+//-- Variable
+
+// Base
+*	{
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Mulish', sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+.pr-20 {
+  padding-right: 20px;
+}
+.mb-60 {
+	margin-bottom: 60px;
+}
+.mr-30 {
+	margin-right: 30px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+// Color
+.cl-primary {
+	color: $primary-color !important;
+}
+.cl-white {
+	color: #fff !important;
+}
+// --Color
+
+// Back-ground
+.bg-primary {
+	background-color: $primary-color !important;
+}
+.bg-primary:hover {
+	background-color: transparent !important;
+	color: $primary-color !important;
+}
+.bg-white {
+	background-color: transparent;
+}
+.bg-white:hover {
+	background-color: $primary-color !important;
+	color: #fff !important;
+}
+// --Back-ground
+
+// Btn
+.btn {
+	padding: 15px 20px ;
+	font-size: 2rem;
+	text-decoration: none;
+	font-weight: 700;
+	display: inline-block;
+}
+.btn-rounded {
+	border: 2px solid $primary-color;
+}
+
+// --Btn
+
+// Icon
+.ico {
+  font-size: 6rem;
+  color: $primary-color;
+}
+.ico-sm {
+  @extend .ico;
+  font-size: 4rem;
+}
+// --Icon
+// Heading
+.heading-1 {
+	font-size: 6rem;
+	color: $title-color;
+}
+.heading-2 {
+  @extend .heading-1;
+  font-size: 4rem;
+}
+.heading-3 {
+  @extend .heading-1;
+  font-size: 2.6rem;
+}
+// --Heading
+
+// Text
+.section-description {
+	font-size: 2rem;
+	color: $text-color;
+}
+.section-description2 {
+  @extend .section-description;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.text-center {
+	text-align: center;
+}
+.align-item-center {
+	align-items: center;
+}
+// --Text
+
+// --Base
+
+// Header
+#header {
+	background-color: #F3F6FA ;
+	position: fixed;
+	width: 100%;
+}
+.nav-brand {
+	width: 120px;
+	height: 80px;
+}
+.nav-list {
+	display: flex;
+	font-size: 2rem;
+	list-style-type: none;
+	justify-content: space-around;
+	padding: 8px 0 10px 0;
+}
+.nav-start {
+	@extend .nav-list;
+	justify-content: flex-end;
+	align-items: center;
+}
+.nav-link {
+	text-decoration: none;
+	color: $title-color;
+	font-weight: 700;
+}
+.nav-link:hover {
+	color: $primary-color;
+}
+.nav-start-item {
+	padding: 0 20px;
+}
+.menu-item {
+	padding: 10px 0;
+}
+
+// --Header
+
+// Section1
+.section1 {
+	padding-top: 240px;
+	background-image: url('../img/bg-section.jpg');
+	background-size: contain;
+}
+.section1-item {
+	padding-bottom: 220px;
+}
+.section-img {
+	width: 100%;
+	background-size: contain;
+}
+
+// --Section1
+
+// Section2
+.section2 {
+  padding: 60px 0;
+}
+.card-link {
+  text-decoration: none;
+  color: $primary-color;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.section2-item {
+  padding: 30px 20px;
+}
+//--Section2
+
+
+// Section3
+.section3 {
+  padding-bottom: 100px;
+}
+.input {
+  display: flex;
+}
+.input-section {
+ flex: 1;
+ font-size: 2rem;
+ padding-left: 20px;
+ background-color: #F4F5F4;
+ border: none;
+} 
+.section3-item {
+  padding: 0 20px;
+}
+// --Section3
+
+// Section4
+.section4-item {
+  @extend .section3-item;
+}
+.shipping {
+  display: flex;
+}
+// --Section4
+
+// Section5
+.section5 {
+  padding: 100px 0;
+}
+.section5-item {
+  @extend .section3-item;
+}
+// --Section5
+//Tablet
+@media screen and (min-width:767px) and (max-width:1024px) {
+	.section1 {
+		padding-top: 170px;	
+	}
+	.section-description {
+		padding: 0 ;
+	}
+	.section1-item {
+		padding-bottom: 130px;
+	}
+}
+// --Tablet
+
+// Mobile
+@media screen and (max-width:766px)  {
+	.nav-brand {
+    width: 100px;
+    height: 60px;
+		margin-left: 10px;
+	}
+	.section1 {
+    padding-top: 90px;
+	}
+	.heading-1 {
+    font-size: 3.4rem;
+	}
+	.section-description {
+    font-size: 1.8rem;
+	}
+  .section-description2 {
+    font-size: 1.6rem;
+  }
+	.btn {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.section1-item {
+		padding: 0 20px;
+	}
+	.mr-30 {
+		margin-right: 0;
+	}
+  .input {
+    flex-direction: column;
+  }
+  .input-section {
+    padding: 18px 20px;
+    margin-bottom: 20px;
+  }
+  .section3-item {
+    padding: 0 20px;
+  }
+  .section3 {
+    padding-bottom: 0;
+  }
+  .shipping {
+    display: block;
+  }
+}
+// --Mobile
